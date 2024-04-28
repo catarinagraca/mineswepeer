@@ -1,0 +1,8 @@
+.tabuleiro {
+    display: flex;
+    flex-direction: column;
+}
+
+.linha {
+    display: flex;
+}

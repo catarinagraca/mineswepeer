@@ -1,7 +1,7 @@
 import React ,{ useState }from "react";
-import './quadrado.css';
+import './cell.css';
 
-export default function Quadrado(){
+export default function Cell(){
 
     const [clicado, setClicado] = useState(false);
 

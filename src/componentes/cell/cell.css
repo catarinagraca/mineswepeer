@@ -1,0 +1,10 @@
+.quadrado{
+    width: 20px;
+    height: 20px;
+    border: rgb(255, 127, 170) 2px solid;
+    background-color: rgba(255, 127, 170, 0.623);
+}
+
+.red{
+    background-color: #002fff;
+}

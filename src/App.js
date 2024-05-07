@@ -1,14 +1,11 @@
 import './App.css';
-import Tabuleiro from './componentes/tabuleiro/tabuleiro';
-import PainelControlo from './componentes/painel controlo/painelControlo';
+import Cell from './componentes/cell/cell';
 
 function App() {
     return(
-        <div>
-            <PainelControlo></PainelControlo>
-            <Tabuleiro></Tabuleiro>   
-        </div>
         
+        <Cell></Cell>
+
     )
 }
 

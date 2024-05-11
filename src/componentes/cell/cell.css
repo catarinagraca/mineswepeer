@@ -8,3 +8,16 @@
 .red{
     background-color: #002fff;
 }
+.even{
+    border: rgb(0, 0, 0) 1px solid;
+    width: 20px;
+    height: 20px;
+    background-color: #EBB636;
+}
+
+.odd{
+    border: rgb(0, 0, 0) 1px solid;
+    width: 20px;
+    height: 20px;
+    background-color: #EB8A00;
+}

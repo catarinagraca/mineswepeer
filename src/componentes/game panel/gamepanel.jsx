@@ -15,6 +15,8 @@ export default function GamePanel({board,level}) {
       case '3':
         gameClass='avancado'
         break;
+      default:
+        gameClass='basic'
 
     }
 
@@ -23,12 +25,15 @@ export default function GamePanel({board,level}) {
         const newCells=[]
         console.log(board)
         for (let i = 0; i < board.nLines; i++) {
-            for (let j = 0; j < board.nColumns; j++) {
-                newCells.push(<Cell key={`${i}-${j}`} />); //para ter o numero da celula
+            for (let j = 1; j < board.nColumns; j++) {
+                newCells.push(<Cell  pos ={i.toString() + j.toString()} key={`${i}-${j}`}  />); //para ter o numero da celula
+                console.log(i.toString() + j.toString()) //está a contar mal
             }
         }
         return newCells;
     };
+
+    
     
   return (
     <div className={`game-panel ${gameClass}`} >{CreateBoard()}</div>

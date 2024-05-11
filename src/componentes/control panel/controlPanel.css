@@ -1,4 +1,26 @@
 .levelBtn{
-    background-color: white;
-    color:black;
+    background-color:#ffb52e;
+    color:#fff1c7;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 10px;
+    
+}
+.startBtn{
+    background-color:#fff1c7;
+    color:#ffb52e;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 10px;
+    
+}
+.btns{
+    display: flex;
+    justify-content: center;
+}
+
+.gameStartedClass{
+    display: flex;
 }

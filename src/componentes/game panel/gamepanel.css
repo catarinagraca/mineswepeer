@@ -9,3 +9,9 @@
 .avancado{
     width: 600px;
 }
+
+.game-panel{
+    display: block;
+    margin: auto;
+    padding: 30px;
+}

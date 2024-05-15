@@ -1,13 +1,13 @@
 .basic{
-    width: 180px;
+    width: 270px;
 }
 
 .intermedio{
-    width: 320px;
+    width: 480px;
 }
 
 .avancado{
-    width: 600px;
+    width: 900px;
 }
 
 .game-panel{
@@ -15,3 +15,11 @@
     margin: auto;
     padding: 30px;
 }
+.linha{
+    display: flex;
+    
+}
+
+/* .game-panel button:nth-child(even){
+    background-color: red;
+} */

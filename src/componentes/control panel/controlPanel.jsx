@@ -9,14 +9,10 @@ export default function ControlPanel({
 }) {
   const [gameStarted, setGameStarted] = useState(startClock);
 
-  const handleTimer = () => {
-    setGameStarted(true);
-  };
-
-useEffect(()=> {
-    
-}, [startClock])
-  /*const [nivelJogo, setNivelJogo] = useState("básico");*/
+    useEffect(()=> {
+        setGameStarted(startClock)      //sempre q o startclock é alterado o game started também
+    }, [startClock])
+  
 
   return (
     <div id="controlPanelContainer">
@@ -36,7 +32,7 @@ useEffect(()=> {
       </div>
       <div className="itemsPanel">
         <dl className="items">
-          <dt>Tempo de Jogo:</dt>
+          <dt><img src="../../public/imagens/redfag.png"/>Tempo de Jogo:</dt>
           <dd id="gameTime">{gameStarted ? <Timer /> : "0"}s</dd>
         </dl>
         <dl className="items">

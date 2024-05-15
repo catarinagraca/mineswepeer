@@ -27,13 +27,22 @@ function App() {
   });
 
  const handleClick=(x,y)=>{
-  console.log(x+','+y);
-  setGameStarted(true)
-  if (!gameStarted) {
-    spawnBomb()
-  } 
-  
+    //console.log(x+','+y);
+    setGameStarted(true)
+    if (!gameStarted) {
+      spawnBomb()
+    
+    } 
+    const newBoard = [...arrayBoard];
+    if (newBoard[x][y].bomb==true) {
+            alert("Game Over");
+            handleResetGame()  
+            //setGameStarted(false)   //gameover
+        }
+    
  }
+
+ 
 
   const handleResetGame = () => {
      setGameStarted(false);
@@ -126,11 +135,12 @@ function App() {
         onLevelChange={handleLevelChange}
         handleClick={handleResetGame}
         startClock={gameStarted}
+        board={board}
 
         //onGameStart={handleGameStart}
       ></ControlPanel>
       <GamePanel board={board} arrayBoard={arrayBoard} level={level} handleClick={handleClick}></GamePanel>
-      {console.log(arrayBoard)}
+      
     </div>
     // <Cell></Cell>
   );

@@ -9,3 +9,6 @@ help: # Show this help
 
 run: ## Run the app
 	PORT=3987 docker compose up -d --build
+
+run-local: ## Run the app locally
+	export PORT=3987 && npm run start

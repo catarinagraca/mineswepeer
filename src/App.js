@@ -125,7 +125,8 @@ function App() {
       <ControlPanel
         onLevelChange={handleLevelChange}
         handleClick={handleResetGame}
-        gameStarted={gameStarted}
+        startClock={gameStarted}
+
         //onGameStart={handleGameStart}
       ></ControlPanel>
       <GamePanel board={board} arrayBoard={arrayBoard} level={level} handleClick={handleClick}></GamePanel>

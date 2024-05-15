@@ -36,3 +36,8 @@
     padding: 10px;
     margin: auto;
 }
+
+#controlPanelContainer{
+    width: fit-content;
+    margin: auto;
+}

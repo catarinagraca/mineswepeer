@@ -19,7 +19,7 @@ useEffect(()=> {
   /*const [nivelJogo, setNivelJogo] = useState("básico");*/
 
   return (
-    <div>
+    <div id="controlPanelContainer">
       <div className="btns">
         <button className="levelBtn" onClick={() => onLevelChange("1")}>
           Básico (9x9)

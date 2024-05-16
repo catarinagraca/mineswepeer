@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from "react";
 import "./controlPanel.css";
 import Timer from "../timer/timer";
 
+
 export default function ControlPanel({
   onLevelChange,
   startClock,

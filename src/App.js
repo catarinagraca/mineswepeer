@@ -34,10 +34,11 @@ function App() {
     
     } 
     const newBoard = [...arrayBoard];
-    if (newBoard[x][y].bomb==true) {
+    if (newBoard[y][x].bomb==true) {
             alert("Game Over");
-            handleResetGame()  
-            //setGameStarted(false)   //gameover
+            handleResetGame()
+            
+             //gameover
         }
     
  }
@@ -135,7 +136,7 @@ function App() {
         onLevelChange={handleLevelChange}
         handleClick={handleResetGame}
         startClock={gameStarted}
-        board={board}
+        bombs={board.nBombs}
 
         //onGameStart={handleGameStart}
       ></ControlPanel>

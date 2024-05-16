@@ -8,6 +8,6 @@ export default function Cell({handleClick,x,y, cell}){
     }
 
     return(
-        <button className="quadrado" onClick={handleCellClick}>{cell.bomb ? "*" : ''}</button>
+        <button className="quadrado" onClick={handleCellClick}>{cell.bomb ? <img src="imagens/redflag.png" width={20} alt="flag" /> : ''}</button>
     )
 }

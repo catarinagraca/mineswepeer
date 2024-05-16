@@ -6,7 +6,7 @@ export default function ControlPanel({
   onLevelChange,
   startClock,
   handleClick,
-  board
+  bombs
 }) {
   const [gameStarted, setGameStarted] = useState(startClock);
 
@@ -33,14 +33,18 @@ export default function ControlPanel({
       </div>
       <div className="itemsPanel">
         <dl className="items">
-           <dt>Tempo de Jogo:</dt>{/* */}
-          <dd id="gameTime">{gameStarted ? <Timer /> : "0"}s</dd>
+            <dt><img src="imagens/relogio.png" width={50} alt="relogio"/></dt>
+            <dd id="gameTime">{gameStarted ? <Timer /> : "0"}s</dd>
         </dl>
         <dl className="items">
-          <dt><img src="imagens/redflag.png" width={50} alt="red flag"/>Bandeiras:</dt>
-          <dd id="flags">{board.numBombs}</dd>
+            <dt><img src="imagens/redflag.png" width={50} alt="red flag"/></dt>
+            <dd id="flags">{bombs}</dd>
         </dl>
-      </div>
+         {/*<dl className="items">
+            <dt><img src="imagens/questionMark.png" width={20} alt="relogio"/></dt>
+            <dd id="gameTime"></dd>
+        </dl>*/}
+      </div> 
     </div>
   );
 }

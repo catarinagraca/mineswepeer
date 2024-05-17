@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+.quadrado.clicked{
+    background-color: #f00;
+}
+
 
 
 .par .quadrado:nth-of-type(even), .impar .quadrado:nth-of-type(odd){

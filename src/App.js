@@ -93,18 +93,7 @@ function App() {
   const handleResetGame = () => {
     setGameOver(false);
     setGameStarted(false);
-    setArrayBoard(() => {
-      //board bidimensional com bombas, etc...
-      const initalBoard = Array.from({ length: board.nLines }, () =>
-        Array.from({ length: board.nColumns }, () => ({
-          bomb: false,
-          flag: 0,
-          clicked: false,
-          promixityBombs: 0,
-        }))
-      );
-      return initalBoard;
-    });
+    setArrayBoard(initalBoard(board));
   };
 
   const gameWin = () => {
@@ -160,9 +149,9 @@ function App() {
           const neighbourY = y + dy;
           if (
             neighbourX >= 0 &&
-            neighbourX < board.nLines &&
+            neighbourX < board.nColumns &&
             neighbourY >= 0 &&
-            neighbourY < board.nColumns
+            neighbourY < board.nLines
           ) {
             newBoard[neighbourY][neighbourX].clicked = true;
           }

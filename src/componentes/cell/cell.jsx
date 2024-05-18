@@ -4,10 +4,7 @@ import "./cell.css";
 export default function Cell({ handleClick, x, y, cell, placeFlag, gameOver }) {
   let cellClass = "quadrado";
   if (cell.clicked) {
-    cellClass += " clicked";
-    if (cell.promixityBombs > 0) {
-      cellClass += " has-bombs";
-    }
+    cellClass += " clicked ";
   }
 
   let displayValue;
@@ -17,7 +14,7 @@ export default function Cell({ handleClick, x, y, cell, placeFlag, gameOver }) {
       displayValue = "💥"; //💣
     } else if (cell.promixityBombs) {
       displayValue = cell.promixityBombs;
-      cellClass += `nBombas${cell.promixityBombs}`;
+      cellClass += ` nBombas${cell.promixityBombs} `;
     } else {
       displayValue = " ";
     }

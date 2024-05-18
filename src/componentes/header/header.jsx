@@ -14,7 +14,7 @@ function Header() {
     return (
       <header>
         
-        <h1 className="title">Mineswepeer em React</h1>
+        <h2 className="title">Mineswepeer em React</h2>
         <img src="imagens/questionMark.png" width={20} height={20} alt="relogio" onClick={handlePopUp}/>
         <Rules trigger={popUp} setTrigger={setPopUp}>
           <h3>Regras</h3>

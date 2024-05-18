@@ -6,15 +6,33 @@
     background-color: #EBB636;
     margin: 0;
     padding: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 .clicked{
-    background-color: #f00 !important
+    background-color: rgb(235, 255, 120) !important
+}
+.nBombas1{
+    color: blue;
+}
+.nBombas2{
+    color: rgb(255, 0, 0);
+}
+.nBombas3{
+    color: rgb(255, 0, 179);
+}
+.nBombas4{
+    color: rgb(2, 177, 17);
+}
+.nBombas5{
+    color: rgb(0, 0, 0);
+}
+.nBombas6{
+    color: rgb(194, 149, 0);
 }
 
-.has-bombs{
-    color: aliceblue;
-}
 
 
 

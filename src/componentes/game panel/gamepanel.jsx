@@ -20,7 +20,6 @@ export default function GamePanel({
       break;
     case "3":
       gameClass = "avancado";
-      console.log(board);
       break;
     default:
       gameClass = "basic";

@@ -5,16 +5,12 @@ import Timer from "../timer/timer";
 
 export default function ControlPanel({
   onLevelChange,
-  startClock,
+  gameStarted,
   handleClick,
-  bombs
+  bombs,
+  flags,
+  gameOver
 }) {
-  const [gameStarted, setGameStarted] = useState(startClock);
-
-    useEffect(()=> {
-        setGameStarted(startClock)      //sempre q o startclock é alterado o game started também
-    }, [startClock])
-  
 
   return (
     <div id="controlPanelContainer">
@@ -35,16 +31,12 @@ export default function ControlPanel({
       <div className="itemsPanel">
         <dl className="items">
             <dt><img src="imagens/relogio.png" width={50} alt="relogio"/></dt>
-            <dd id="gameTime">{gameStarted ? <Timer /> : "0"}s</dd>
+            <dd id="gameTime"><Timer gameStarted={gameStarted} gameOver={gameOver}/></dd>
         </dl>
         <dl className="items">
             <dt><img src="imagens/redflag.png" width={50} alt="red flag"/></dt>
-            <dd id="flags">{bombs}</dd>
+            <dd id="flags">{bombs-flags}</dd>
         </dl>
-         {/*<dl className="items">
-            <dt><img src="imagens/questionMark.png" width={20} alt="relogio"/></dt>
-            <dd id="gameTime"></dd>
-        </dl>*/}
       </div> 
     </div>
   );

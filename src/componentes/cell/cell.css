@@ -8,8 +8,12 @@
     padding: 0;
 }
 
-.quadrado.clicked{
-    background-color: #f00;
+.clicked{
+    background-color: #f00 !important
+}
+
+.has-bombs{
+    color: aliceblue;
 }
 
 

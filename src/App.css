@@ -51,6 +51,7 @@ header{
 }
 header img{
   display: flex;
+  cursor: pointer;
 }
 /* 
 .container {

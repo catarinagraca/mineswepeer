@@ -21,5 +21,5 @@ export default function Timer({gameOver,gameStarted}) {
   }, [seconds,gameOver,gameStarted]); // O segundo argumento vazio faz com que este efeito só seja executado uma vez, após a montagem do componente
 
 
-  return <>{seconds}</>;
+  return <>{seconds} s</>;
 }

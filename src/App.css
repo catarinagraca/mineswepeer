@@ -50,9 +50,10 @@
   BORDER-RADIUS: 10PX;
   border: 1px solid rgba(228, 174, 24, 0.534);
 }
+/* //bananas
 .container{
   background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmVlbDBzbzh2ZHVxaGVmenQ4ajYxbnNzc2Y3MzA5cGV1am9ta3JzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p0pKuwlSynHLa/giphy.gif');
-}
+} */
 
 #container > header {
   font-size: 1.2em;

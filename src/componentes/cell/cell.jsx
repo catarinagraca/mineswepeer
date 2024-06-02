@@ -20,9 +20,9 @@ export default function Cell({ handleClick, x, y, cell, placeFlag, gameOver }) {
     }
   } else {
     if (cell.flag === 1) {
-      displayValue = "🚩";
+      displayValue = "🚩";//<img src="imagens/redflag.png" width={25} height={20}/>
     } else if (gameOver && cell.bomb) {
-      displayValue = "💣";
+      displayValue = <img src="imagens/bombs.png" width={25} height={25}/>//"💣";
     } else if (!gameOver && cell.flag === 2) {
       displayValue = "?";
       cellClass += " possibleBomb";

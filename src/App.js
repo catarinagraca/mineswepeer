@@ -4,6 +4,7 @@ import Cell from "./componentes/cell/cell";
 import ControlPanel from "./componentes/control panel/controlPanel";
 import GamePanel from "./componentes/game panel/gamepanel";
 import Header from "./componentes/header/header";
+import Footer from "./componentes/footer/footer.component";
 
 function App() {
   const [board, setBoard] = useState({
@@ -28,7 +29,7 @@ function App() {
     );
   };
   const [arrayBoard, setArrayBoard] = useState(() => initalBoard(board));
-
+  const [displayValue,setDisplayValue]=useState('');
   useEffect(() => {
     setArrayBoard(initalBoard(board));
     setGameStarted(false);
@@ -114,7 +115,11 @@ function App() {
         }
       }
       if (board.nColumns * board.nLines - board.nBombs == openCells) {
-        alert("ganhaste");
+        //alert("ganhaste");
+        setDisplayValue('GANHASTE!!!')
+         setTimeout(() => {
+      setDisplayValue(''); 
+    }, 5000);
         setGameOver(true);
       }
     }
@@ -160,7 +165,11 @@ function App() {
       setArrayBoard(newBoard);
       if (newBoard[y][x].bomb == true) {
         setGameOver(true);
-        alert("Game Over");
+        //alert("Game Over");
+        setDisplayValue('GAMEOVER!')
+        setTimeout(() => {
+          setDisplayValue(''); // Reset the display value to an empty string
+        }, 5000);
       }
     }
   };
@@ -231,25 +240,32 @@ function App() {
 
   return (
     <div className="container">
-      <Header></Header>
-      <ControlPanel
-        onLevelChange={handleLevelChange}
-        handleClick={handleResetGame}
-        gameStarted={gameStarted}
-        gameOver={gameOver}
-        bombs={board.nBombs}
-        flags={placedFlags}
+      <div className="transparente">
+        <div className="gif">
+          <div id="mensagem">{displayValue}</div>
+          <Header></Header>
+          <ControlPanel
+            onLevelChange={handleLevelChange}
+            handleClick={handleResetGame}
+            gameStarted={gameStarted}
+            gameOver={gameOver}
+            bombs={board.nBombs}
+            flags={placedFlags}
 
-        //onGameStart={handleGameStart}
-      ></ControlPanel>
-      <GamePanel
-        board={board}
-        arrayBoard={arrayBoard}
-        level={level}
-        handleClick={handleClick}
-        placeFlag={placeFlag}
-        gameOver={gameOver}
-      ></GamePanel>
+            //onGameStart={handleGameStart}
+          ></ControlPanel>
+          <GamePanel
+            board={board}
+            arrayBoard={arrayBoard}
+            level={level}
+            handleClick={handleClick}
+            placeFlag={placeFlag}
+            gameOver={gameOver}
+            
+          ></GamePanel>
+          <Footer></Footer>
+        </div>
+      </div>
     </div>
     // <Cell></Cell>
   );

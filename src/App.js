@@ -240,7 +240,7 @@ function App() {
 
   return (
     <div className="container">
-      <div className="transparente">
+    
         <div className="gif">
           <div id="mensagem">{displayValue}</div>
           <Header></Header>
@@ -265,7 +265,7 @@ function App() {
           ></GamePanel>
           <Footer></Footer>
         </div>
-      </div>
+      
     </div>
     // <Cell></Cell>
   );

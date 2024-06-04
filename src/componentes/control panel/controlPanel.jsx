@@ -9,7 +9,8 @@ export default function ControlPanel({
   handleClick,
   bombs,
   flags,
-  gameOver
+  gameOver,
+  revelar
 }) {
 
   return (
@@ -27,6 +28,9 @@ export default function ControlPanel({
         <button className="restartBtn" onClick={handleClick}>
           Reiniciar Jogo
         </button>
+        <button className="restartBtn" onClick={revelar}>
+          Revelar tabuleiro
+        </button> 
       </div>
       <div className="itemsPanel">
         <dl className="items">

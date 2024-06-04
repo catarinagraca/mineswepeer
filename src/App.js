@@ -47,7 +47,7 @@ function App() {
     [1, 0],
     [1, 1],
   ];
-
+  const [boardRevealed,setBoardRevealed]=useState(false)
   const changeBoard = (level) => {
     let newBoard = {};
     switch (level) {
@@ -130,7 +130,7 @@ function App() {
     const newBoard = [...arrayBoard];
     if (newBoard[y][x].clicked == false) {
       newBoard[y][x].flag++;
-      if (newBoard[y][x].flag == 3) {
+      if (newBoard[y][x].flag == 3/*4*/) {
         newBoard[y][x].flag = 0;
       }
       console.log(newBoard[y][x].flag);
@@ -163,7 +163,7 @@ function App() {
         });
       }
       setArrayBoard(newBoard);
-      if (newBoard[y][x].bomb == true) {
+      if (newBoard[y][x].bomb == true && !  boardRevealed) {
         setGameOver(true);
         //alert("Game Over");
         setDisplayValue('GAMEOVER!')
@@ -238,6 +238,13 @@ function App() {
     }
   };
 
+   /*
+  const [boardReeveal, setBoardReveal]=useState(false)
+  const revelar=()=>{
+    setBoardReveal(!boardReeveal)
+    console.log(boardReeveal);
+  }*/
+
   return (
     <div className="container">
     
@@ -251,10 +258,13 @@ function App() {
             gameOver={gameOver}
             bombs={board.nBombs}
             flags={placedFlags}
-
-            //onGameStart={handleGameStart}
-          ></ControlPanel>
+            
+            //revelar={revelar}            
+          > 
+          </ControlPanel>
           <GamePanel
+            //boardReeveal={boardReeveal}
+            
             board={board}
             arrayBoard={arrayBoard}
             level={level}

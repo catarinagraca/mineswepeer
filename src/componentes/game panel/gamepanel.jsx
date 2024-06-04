@@ -9,6 +9,7 @@ export default function GamePanel({
   arrayBoard,
   placeFlag,
   gameOver,
+  //boardReeveal
 }) {
   let gameClass;
   switch (level) {
@@ -43,6 +44,9 @@ export default function GamePanel({
               y={i} //coordenadas cartesianas
               cell={arrayBoard[i][j]}
               gameOver={gameOver}
+
+              //boardReeveal={boardReeveal}
+              
             />
           );
         }

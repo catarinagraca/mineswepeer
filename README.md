@@ -1,4 +1,5 @@
-Trabalho LS 23/24, Isec
+Trabalho LS 23/24, ISEC
+MINESWEEPER
 
 
 # Getting Started with Create React App
